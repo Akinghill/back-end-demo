@@ -20,14 +20,13 @@ router.post('/', async (req, res) => {
 
 // Get all Users
 router.get('/', (req, res) => {
-  console.log('hit me')
-  // try {
-  //   User.find({}, (err, users) => {
-  //     res.status(201).json(users)
-  //   })
-  // } catch (err) {
-  //   res.status(500).json({ message: err.message })
-  // }
+  try {
+    User.find({}, (err, users) => {
+      res.status(201).json(users)
+    })
+  } catch (err) {
+    res.status(500).json({ message: err.message })
+  }
   // let id = req.params.id;
   // User.findById({ _id: id }, (err, data) => {
   //     if (err) {

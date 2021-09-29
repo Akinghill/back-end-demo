@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(routes);
 
 //connect mongoose
-mongoose.connect(process.env.DATABASE_URI || process.env.MONGODB_URI, {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(console.log('The mon(goose) is on the loose. #mrPipes'));
